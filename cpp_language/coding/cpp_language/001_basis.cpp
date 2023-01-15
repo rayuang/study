@@ -7,7 +7,7 @@ using namespace std;
 // 主函数-> 有且只有一个
 int main()
 {
-    cout << "HelloWord" << endl;
+    cout << "HelloWorld" << endl;
 
     // 数据类型,同c
     int num = 10;
