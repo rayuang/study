@@ -15,7 +15,7 @@ int a = 10;
 int main()
 {
     // 库函数printf() -> stdio.h
-    printf("Hello Word");
+    printf("Hello World");
     // 数据类型
     // 变量的定义：主句类型 变量名 = 赋值 -> 变量可更改;
     int age = 18;
