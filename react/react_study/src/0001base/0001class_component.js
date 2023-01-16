@@ -7,7 +7,7 @@ import React from "react";
  * 2. 最外层只能有一个标签，不能并列
  * 3. return后不能换行,若换行需放在()中
  */
-class ClassComponent extends React.Component{
+class App extends React.Component{
     render(){
         return <div>
                 <p>
@@ -17,4 +17,4 @@ class ClassComponent extends React.Component{
     }
 }
 
-export default ClassComponent
+export default App
