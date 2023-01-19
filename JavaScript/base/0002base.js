@@ -22,7 +22,7 @@ var isDel = false //0,true为1
 console.log(isDel)
 // 检测数据类型：两种用法
 console.log(typeof (num), typeof username, typeof (isDel))
-// 数据类型转换: NaN=>not Number 但属于Number类型
+// 数据类型转换: NaN=>not Number 但属于Number类型 为不合法
 /* 
 转数值Number(),转换不过来即NaN,Null对象转数值后为0
 parseInt(),parseFloat()
@@ -42,4 +42,16 @@ var number_1 = "100"
 var number_2 = "100"
 var number_3 = "100"
 console.log(number_1 - 0, number_2 * 1, number_3 / 1)
-
+/* 
+转字符串 String() and toString() and 拼串
+*/
+var a = 100
+var b = String(a)//布尔转后为true或false字符串，undefined和Null转后为字符串形式的undefined和Null
+var c = true
+var d = c.toString()//不可转Null和undefined，若转化则报错
+var e = 300
+var f = e + ""
+console.log(b, d, f)
+/* 
+转布尔 在js中，只有'' "" 0 null undefined NaN这些事false其他都为true
+*/
