@@ -1,5 +1,5 @@
 # dependencies
-/react/react_study/node_modules
+/**/node_modules
 /**/*.exe
 /**/*.class
 /**/*.log
