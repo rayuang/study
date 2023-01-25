@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            html,
+            body {
+                height: 1000px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <button id="isAlert">isAlert</button>
+            <button id="isConfirm">isConfirm</button>
+            <button id="isPrompt">isPrompt</button>
+            <!-- --- -->
+            <button id="goto_href">goto_href</button>
+            <button id="reload">reload</button>
+            <button id="go_open">go_open</button>
+            <button id="isClose">isClose</button>
+            <button id="isBack">Back</button>
+            <button id="isForward">isForward</button>
+
+        </div>
+        <script>
+
+            console.log("获取浏览器窗口高度和宽度(包括滚动条)", innerHeight, window.innerHeight, innerWidth, window.innerWidth)
+            // 弹出层会阻塞后续代码的执行，每个浏览器弹出层样式不一
+            isAlert.onclick = function () {
+                alert("浏览器弹出层")
+            }
+            isConfirm.onclick = function () {
+                console.log(confirm("询问框?确定返回true,否则返回false"))
+            }
+            isPrompt.onclick = function () {
+                console.log(prompt("输入框"))
+            }
+            // 浏览器地址栏
+            console.log("页面地址：\t", location.href, "\n")
+            // 跳转页面
+            goto_href.onclick = function () {
+                location.href = "https://baidu.com"
+            }
+            // 重新加载页面
+            reload.onclick = function () {
+                location.reload()
+            }
+            // 常用事件
+            window.onload = function () {
+                console.log("浏览器所有资源加载完后执行")
+            }
+            window.onresize = function () {
+                console.log("浏览器窗口大小被改变")
+            }
+            window.onscroll = function () {
+                console.log("窗口滚动时执行")
+                // 滚动距离
+                console.log("滚动上去了多少：\t", document.documentElement.scrollTop)
+                /* 若没有声明<!DOCTYPE html>，即不是HTML5，则该语句失效，推荐使用：
+                document.body.scrollTop
+                即：
+                 document.documentElement.scrollTop || document.body.scrollTop
+                */
+                console.log("横向滚动距离\t", document.documentElement.scrollLeft)
+                // 回到顶部
+                window.scrollTo(0, 0)//参数为浏览器窗口x,y
+                // 或
+                window.screenTo({
+                    left: 0,
+                    top: 0
+                })
+            }
+            go_open.onclick = function () {
+                // 在新标签页打开
+                window.open("https://baidu.com")
+            }
+            isClose.onclick = function(){
+                //关掉调用该函数的的页面
+                window.close()
+            }
+            isBack.onclick = function(){
+                // 会到上一个页面，前提是有
+                history.back()
+            }
+            isForward.onclick = function(){
+                // 跳转下一个页面，前提是有
+                history.forward()
+            }
+
+            /* 
+            history.go(a)
+            a为正数则表示前进正数页，为负数则表示后退负数的绝对值页，前提是有
+            */
+            
+        </script>
+    </body>
+
+</html>
