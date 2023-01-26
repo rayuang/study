@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-- 
+            local为永久存储，永远不会丢失，除非卸载浏览器或手动删除
+            session为临时存储，关闭页面就丢失
+
+         -->
+        <button id="set_local_storage">set_local_storage</button>
+        <button id="get_local_storage">get_local_storage</button>
+        <button id="del_local_storage">del_local_storage</button>
+        <button id="clear_local_storage">clear_local_storage</button>
+        <button id="set_session_storage">set_session_storage</button>
+        <button id="get_session_storage">get_session_storage</button>
+        <button id="del_session_storage">del_session_storage</button>
+        <button id="clear_session_storage">clear_session_storage</button>
+
+        <script>
+            set_local_storage.onclick = function () {
+                // 本地存储-存-改即覆盖
+                // 只能存字符串，其他会被转换为字符串 对象转换为字符串为 -> [object Object]
+                localStorage.setItem("name", "wang")
+            }
+            get_local_storage.onclick = function () {
+                // 本地存储-取
+                console.log(localStorage.getItem("name"))
+            }
+            del_local_storage.onclick = function () {
+                localStorage.removeItem("name")
+            }
+            clear_local_storage.onclick = function(){
+                localStorage.clear()//清除全部
+            }
+            set_session_storage.onclick = function () {
+                // 会话存储-存-改即覆盖
+                sessionStorage.setItem("name", "wang")
+                
+            }
+            get_session_storage.onclick = function () {
+                // 会话存储-取
+                console.log(sessionStorage.getItem("name"))
+            }
+            del_session_storage.onclick = function () {
+                sessionStorage.removeItem("name")
+            }
+            clear_session_storage.onclick = function(){
+                sessionStorage.clear()//清除全部
+            }
+        </script>
+    </body>
+
+</html>
