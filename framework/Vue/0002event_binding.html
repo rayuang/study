@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="./0000vue.js"></script>
+    </head>
+
+    <body>
+        <div id="App">
+            {{myname}}
+            <button @click="change_myname()">change</button>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: "#App",
+                data: {
+                    myname: "wang"
+                },
+                methods: {
+                    change_myname: function () {
+                        vm.myname = "ruijie"// 没有var vm 也可以使用this调用，this指向Vue实例
+                        console.log("is change")
+                    }
+                }
+
+            })
+        </script>
+    </body>
+
+</html>

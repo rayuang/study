@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="./0000vue.js"></script>
+    </head>
+
+    <body>
+        <div id="App">
+            {{name}}<br>{{age}} <br> {{10-5}}
+        </div>
+
+        <script>
+            var vm = new Vue({
+                el: "#App",
+                data: {
+                    name: "wang",//状态
+                    age: 20
+                }
+
+            })
+        // 可以通过vm.访问
+        </script>
+        <script>
+            var obj = {
+                myname:"asd"
+            }
+            // 访问myname属性时会执行
+            // vue不支持ie8或es5一下版本，因为其没有此函数
+            Object.defineProperty(obj,"myname",{
+                get:function(){
+                    document.write("get")
+                },
+                set:function(value){// 修改的指会当作形参传入value
+                    document.write("set",value)
+                }
+            })
+        </script>
+    </body>
+
+</html>
