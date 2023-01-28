@@ -5,3 +5,6 @@
 /**/.*
 
 /**/.vscode/*
+
+# mini programs
+!/**/.eslintrc.js
