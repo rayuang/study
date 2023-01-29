@@ -1,0 +1,47 @@
+<!-- 行内同text -> span -->
+<text>pages/base/base.wxml</text>
+<!-- 块级元素view -> div -->
+<view>
+  <text class="username">{{username}}</text>
+  <view id="my_{{ids[0]}}"></view>
+  <view id="my_{{ids[1]}}"></view>
+  <view id="my_{{ids[2]}}"></view>
+</view>
+<view wx:for="{{ids}}" wx:key="my_ids" wx:for-item="my_item" wx:for-index="my_index">
+  {{my_index}} - {{my_item}}
+</view>
+<view wx:if="{{is_create}}">
+  <!-- 查看源码节点直接没有创建 -->
+  我是动态创建或删除-1
+</view>
+<view wx:else>
+  我是动态创建或删除-2
+</view>
+<view hidden="{{is_hidden}}">
+  <!-- 源码display: none;修饰，节点无论如何都会创建 -->
+  我是隐藏和显示
+</view>
+<!-- 
+    冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递，非冒泡事件则不会
+    bindtap会向上冒泡，catchtap不会：
+    <button bindtap="3">
+      <button catchtap="2">
+        <button bindtap="1"></button>
+      </button>
+    </button>
+    即：点击1会触发1和2，不会触发3，但点击2只会触发自己
+ -->
+<button type="primary" bindtap="update_username">click1</button>
+<button type="primary" catchtap="update_username">click2</button>
+<text>todolist</text>
+<view>
+  <input bindinput="handlerInput" value="{{add_value}}" type="text"/>
+  <button catchtap="add_cont">add</button>
+  <view class="list" wx:for="{{cont}}" wx:key="index" wx:for-item="add_cont_item">
+    <text>{{add_cont_item}}</text>
+    <button bindtap="handlerDel" data-listId="{{index}}" size="mini">del</button>
+  </view>
+  <view hidden="{{cont.length > 0}}">
+    暂无消息
+  </view>
+</view>

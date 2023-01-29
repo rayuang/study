@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/base/base",
+    "pages/home/home",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#abc",
+    "navigationBarTitleText": "Hello World",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#f60",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "home",
+      "iconPath": "/images/icon_1.png",
+      "selectedIconPath": "/images/icon_2.png"
+    },
+    {
+      "pagePath": "pages/base/base",
+      "text": "base",
+      "iconPath": "/images/icon_1.png",
+      "selectedIconPath": "/images/icon_2.png"
+    },
+    {
+      "pagePath": "pages/test/test",
+      "text": "test",
+      "iconPath": "/images/icon_1.png",
+      "selectedIconPath": "/images/icon_2.png"
+    }]
+  }
+}
