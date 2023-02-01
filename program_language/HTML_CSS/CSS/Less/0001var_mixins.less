@@ -1,0 +1,59 @@
+/* 
+这种注释编译后在css中可以看见
+*/
+// 
+// 变量
+@bgc: pink;
+// 变量定义属性名、选择器名、URL和语句，用的时候必须加{}
+@col: color;
+
+.base_text_style {
+    // 使用定义的属性名变量
+    @{col}: green;
+    font-size: 26px;
+    text-align: center;
+}
+
+.base_1 {
+    width: 100px;
+    height: 100px;
+    background-@{col}: @bgc;
+    // 混合
+    .base_text_style();
+}
+
+.base_2 {
+    .base_text_style();
+}
+
+// 惰性求值
+.lazy-eval {
+    width: @var;
+}
+
+@var: @a;
+@a: 9%;
+
+// 块级作用域，从当前范围向上搜索。类似于css
+@var: 0;
+
+.class {
+    @var: 1;
+
+    .brass {
+        @var: 2;
+        font-size: @var;
+        @var: 3;
+    }
+
+    font-weight: @var;
+}
+
+// 编译后
+.class {
+    font-weight: 1;
+}
+
+.class .brass {
+    font-size: 3;
+}
