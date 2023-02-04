@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-- 无序列表默认实心黑色圆, type="[disc(实心圆),circle(空心圆),square(正方形),none(没有)]" -->
+        <ui>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ui>
+        <!-- 有序列表 type="[1,a,A,i,I]"定义列表前编号样式，默认1.2.3. -->
+        <ol type="i">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+        <!-- 自定义列表-多用于图文混排 -->
+        <dl>
+            <dt>dt图片或文字</dt>
+            <dd>dd相关文字,前面的空是默认边距,可清掉</dd>
+        </dl>
+        <!-- 
+            src写成绝对路径为file协议,
+            而浏览器访问使用http协议，故绝对路径会造成浏览器找不到
+            宽高只设置一个另一个会等比缩放
+         -->
+        <img src="../img/study_img.jpg" title="鼠标移上去的提示信息,开启语音辅助可朗读" alt="图片加载失败的提示信息" width="200px" height="200px">
+        <!-- 
+            超链接
+            {
+                target: {
+                    _self:当前页打开,
+                    _blank:新窗口打开
+                }
+            }
+         -->
+         <a href="http://baidu.com" target="_blank">链接名,默认在当前页面打开</a>
+    </body>
+
+</html>

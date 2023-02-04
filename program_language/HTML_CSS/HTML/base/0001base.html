@@ -20,8 +20,9 @@
         <h6>6</h6>
         <p>段落标签</p>
         <span>行内标签<br>换行</span>
-        <!-- 水平线 -->
-        <hr>
+        <!-- 水平线 hr默认会在下面有灰色阴影,
+            去掉阴影使用noshade="noshade" 可以没有value只有key -->
+        <hr noshade="noshade">
         <p>
             <b>加粗1</b>
             <strong>加粗2</strong>
@@ -32,8 +33,16 @@
             <u>下划线</u>
             <sub>下标</sub>
             <sup>上标</sup>
-
         </p>
+        <!-- hr样式控制 -->
+        <hr color="pink" size="26px" width="200px" align="left">
+        <p>空格受字体大小影响&nbsp;空格不受字体大小影响,为1个中文宽度&emsp;<br/>
+            左尖角号&lt;右尖角号&gt;版权符号&copy;商标符号&trade;和&reg;
+        </p>
+        <div>
+            划分页面区域,没有实际含义
+            <span>span没有实际意义,主要对于文本独立修饰,内容多款就占多宽</span>
+        </div>
     </body>
 
 </html>
