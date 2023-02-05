@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-- body的高度是靠内容撑开的 -->
+        <!-- 
+            border控制表格外边框宽度
+            width控制表格整体宽度
+            height控制表格整体高度
+            align控制表格整体相对父元素的位置
+            bordercolor控制边框颜色
+            bgcolor表格背景色
+            cellspacing控制单元格之间的间距
+            cellpadding控制单元格与内容之间的间隙
+            
+         -->
+        <table border="1" width="200px" height="200px" align="center" bordercolor="pink" bgcolor="green"
+            cellspacing="20" cellpadding="20">
+            <!-- 
+                height设置行高
+                bgcolor设置背景色
+                align设置文字水平对齐方式
+                valign设置文字垂直对齐方式，值为{top,middle和bottom}
+             -->
+            <tr height="150px" bgcolor="pink" align="center" valign="bottom">
+                <!-- 合并列 colspan 合并需删除被合并的单元格，否则或被挤出去 -->
+                <td colspan="2">单元格</td>
+            </tr>
+            <tr>
+                <!-- 
+                    width设置td宽度
+                    height设置td高度
+                    bgcolor设置td背景色
+                    文字水平和垂直对齐方式同tr
+                -->
+                <td width="200px" height="200px" bgcolor="yellowgreen">单元格</td>
+                <!-- 
+                    合并行rowspan，需删除被合并的单元格，否则会被挤出去
+                 -->
+                <td rowspan="2">单元格</td>
+            </tr>
+            <tr>
+                <td>单元格</td>
+            </tr>
+        </table>
+    </body>
+
 </html>
