@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- 
+            css样式表优先级
+            行内>内部>外部
+        -->
+        <!-- 
+            link属于XHTML标签@import属于css提供的一种方法
+            link会随css一块加载,@import会在css页面下载完后加载，会造成一段时间没有样式
+            @import是css2.1提出的，IE5之前的老浏览器不支持
+        -->
+        <link rel="stylesheet" type="text/css" href="./0000index.css">
+        <style>
+            @import url(./0000index.css);
+        </style>
+    </head>
+
+    <body>
+        <div>1111111111</div>
+        <div class="list_2">2222222222</div>
+        <div id="list_3">3333333333</div>
+        <div>4444444444</div>
+        <div>5555555555</div>
+        <p>ppppppppp<span>abc</span></p>
+        <a href="./0000index.html" target="_blank">this is a "a"</a>
+    </body>
+
+</html>
