@@ -1,0 +1,23 @@
+ul li{
+    /*
+    设置列表项标记样式 
+    list-style-type: disc 实心圆 circle 空心圆 square 实心方块 none 去掉符号
+    */
+    list-style-type: none;
+    /* 
+    list-style-image: url(图片路径) 将url图片原始列表项标记
+    */
+    list-style-image: url(image.jpg);
+    /* 
+    列表项位置的放置位置
+    list-style-position: inside列表里面 outside列表外面;
+    */
+    list-style-position: inside;
+    /* 
+    去除列表符号
+    list-style: none;
+    合并写法：
+    list-style: none url() inside;
+    */
+    list-style: none;
+}

@@ -1,4 +1,9 @@
 .p_1 {
+    /* 
+    综合设置 font
+    font: font-style font-weight font-size line-height font-famliy
+    顺序不能变，但可以少属性
+    */
     /* 字体大小,浏览器默认16px，设计图常用12px */
     font-size: 26px;
     /* 设置字体,中文或中间有空格需加"",
@@ -12,4 +17,63 @@
         }
     */
     color: pink;
+    /* 
+    加粗 - font-weight取值:{
+        100: 细体
+        700: 加粗
+        900: 更粗
+        lighter: 更细
+        normal: 正常
+        bold: 粗体
+        bolder: 更粗体
+    }
+    h1~6标签加normal会变为正常粗细
+    */
+    font-weight: lighter;
+    /* 
+    font-style:{
+        italic: 斜体
+        oblique: 倾斜的文字
+        normal: 正常的
+    }
+    */
+    font-style: oblique;
+    /* 
+    水平居中 - text-align:[left,center,right,justify(水平两端对齐，只能多行起作用)]
+    */
+    text-align: center;
+    /* 
+    控制每行在指定高度中垂直居中 line-height
+    */
+    line-height: 60px;
+    /* 
+    首行缩进 - text-indent
+    只对每段第一行起作用，可以为负值
+    */
+    text-indent: 2em;
+    /* 
+    控制每个字符之间的间距 - letter-spacing - (会在英语单词每个字母之间产生间距)
+    */
+    letter-spacing: 1px;
+    /* 
+    词间距 - word-spacing  设置单词与单词之间的间距，可以为负数，会导致词重合
+    
+    */
+    word-spacing: 10px;
+    /* 
+    文本修饰 - text-decoration
+    {none:没有,underline:下划线,overline:上划线,line-through:删除线}
+    */
+    text-decoration: overline;
+    /* 
+    text-transform - 大小写
+    {
+        capitalize:每个单词首字母大写,
+        lowercase:每个字母小写,
+        uppercase:每个字母大写
+        none:默认
+    }
+    */
+    text-transform: lowercase;
+
 }
